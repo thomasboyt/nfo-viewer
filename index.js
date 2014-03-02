@@ -10,7 +10,7 @@ var app = express()
     // todo: make this more idiomatic
     var route = req.url;
     if (req.url === '/') {
-      res.end('Add an nfo file to the url.');
+      res.render('index.hbs');
     } else {
 
       fs.readFile('./nfos' + req.url, function(err, buf) {
@@ -33,4 +33,4 @@ var app = express()
     }
   });
 
-http.createServer(app).listen(3000);
+http.createServer(app).listen(process.env.PORT || 5000);
