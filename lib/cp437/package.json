@@ -1,0 +1,14 @@
+{
+  "name": "cp437",
+  "version": "0.1.0",
+  "description": "Convert code page 437 to Unicode",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha spec.js"
+  },
+  "author": "Thomas Boyt",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "~1.17.1"
+  }
+}

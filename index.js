@@ -1,12 +1,13 @@
-var connect = require('connect');
+var express = require('express');
 var http = require('http');
 var fs = require('fs');
 
 var cp437toUnicode = require('./lib/cp437');
 
-var app = connect()
-  .use(connect.logger('dev'))
+var app = express()
+  .use(express.logger('dev'))
   .use(function(req, res){
+    // todo: make this more idiomatic
     var route = req.url;
     if (req.url === '/') {
       res.end('Add an nfo file to the url.');
@@ -25,7 +26,8 @@ var app = connect()
         }
 
         var nfo = cp437toUnicode(buf);
-        res.end(nfo);
+
+        res.render('viewer.hbs', { nfo: nfo });
       });
 
     }

@@ -1,0 +1,17 @@
+{
+  "name": "nfo-viewer",
+  "version": "0.0.0",
+  "description": "An express-powered NFO viewer that converts code page 437 to a Unicode approximation.",
+  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "hbs": "~2.5.0",
+    "express": "~3.4.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thomas Boyt",
+  "license": "MIT"
+}
